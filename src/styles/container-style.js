@@ -11,5 +11,4 @@ module.exports = csjs`
     font-size: 11px;
     z-index: 9999;
 }
-
 `;
