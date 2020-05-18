@@ -38,7 +38,7 @@ const baseTheme = {
         menuBarHeight: '25px',
         componentHeight: '20px',
         componentSpacing: '5px',
-        labelWidth: '42%',
+        labelWidth: '42%'
     },
 };
 

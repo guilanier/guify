@@ -3,6 +3,10 @@ import css from 'dom-css';
 
 const styles = require('styles/components/file-style.js');
 
+function isFileImage(file) {
+    return file && file['type'].split('/')[0] === 'image';
+}
+
 /**
  * File component. Drag and drop a file or click to choose a file.
  */
@@ -57,7 +61,16 @@ export default class File extends EventEmitter {
             var reader = new FileReader();
             reader.onload = () => {
                 this.file = reader.result;
-                this.fileLabel.innerHTML = files[0].name;
+                if(isFileImage(files[0])){
+                    var image = new Image();
+                    image.height = 50;
+                    image.title = files[0].name;
+                    image.src = this.file;
+                    this.fileLabel.innerHTML = null;
+                    this.fileLabel.appendChild( image );
+                } else {
+                    this.fileLabel.innerHTML = files[0].name;
+                }
                 this.emit('input', this.file);
             };
 

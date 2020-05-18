@@ -59,8 +59,6 @@
 
 
         var container = document.getElementById("fake-container");
-        console.log(this);
-
         // Create the GUI
         var gui = new guify({
             title: 'Test App',
@@ -200,7 +198,7 @@
         var file = null;
         gui.Register({
             type: 'file',
-            label: 'File',
+            label: 'Test File',
             object: this,
             property: 'file',
             onChange: (data) => {
