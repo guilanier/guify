@@ -15,7 +15,7 @@ module.exports = csjs`
     line-height: ${theme.sizing.componentHeight};
     padding-top: 0px;
     padding-bottom: 0px;
-    width: calc(100% - ${theme.sizing.labelWidth});
+    min-width: calc(100% - ${theme.sizing.labelWidth});
     border: none;
     cursor: pointer;
     right: 0;

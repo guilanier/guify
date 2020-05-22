@@ -23,7 +23,7 @@ module.exports = csjs`
     text-align: left;
     box-sizing: border-box;
 
-    max-height: 70vh;
+    max-height: 85vh;
     overflow-y: scroll;
 }
 

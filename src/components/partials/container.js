@@ -6,6 +6,7 @@ let Container = (root, label, theme) => {
     css(container, {
         position: 'relative',
         'min-height': theme.sizing.componentHeight,
+        'height': theme.sizing.componentHeight,
         'margin-bottom': theme.sizing.componentSpacing
     });
     return container;
